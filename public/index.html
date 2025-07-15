@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice to NLP</title>
+</head>
+<body>
+  <h1>Voice Assistant</h1>
+  <button onclick="startRecording()">Start Recording</button>
+  <button onclick="stopRecording()">Stop & Send</button>
+
+  <p id="response"></p>
+
+  <script>
+    let mediaRecorder;
+  let audioChunks = [];
+
+  async function startRecording() {
+    audioChunks = [];
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = event => {
+      if (event.data.size > 0) audioChunks.push(event.data);
+    };
+    mediaRecorder.start();
+  }
+
+  async function stopRecording() {
+    mediaRecorder.stop();
+    mediaRecorder.onstop = async () => {
+      const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+      const formData = new FormData();
+      formData.append('audio', audioBlob, 'voice.webm');
+
+      const res = await fetch('/api/voice', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await res.json();
+
+      console.log('[RESPONSE]', data);
+
+      // ✅ Display NLP results
+      document.getElementById('transcript').innerText = data.transcript || '[No transcript]';
+      document.getElementById('intent').innerText = data.intent || '[No intent]';
+      document.getElementById('confidence').innerText = (data.score || 0).toFixed(2);
+      document.getElementById('answer').innerText = data.answer || '[No answer]';
+
+      // ✅ Optional: speak the answer
+      if (data.answer) {
+        const utterance = new SpeechSynthesisUtterance(data.answer);
+        speechSynthesis.speak(utterance);
+      }
+    };
+  }
+  </script>
+</body>
+
+<h2>NLP Result</h2>
+<p><strong>Transcript:</strong> <span id="transcript">[Waiting]</span></p>
+<p><strong>Intent:</strong> <span id="intent">[--]</span></p>
+<p><strong>Confidence:</strong> <span id="confidence">[--]</span></p>
+<p><strong>Answer:</strong> <span id="answer">[--]</span></p>
+
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2025-07-10T10:00:00Z",
+    "message": "I can't access my billing dashboard",
+    "entities": ["billing", "dashboard"]
+  },
+  {
+    "timestamp": "2025-07-11T08:20:00Z",
+    "message": "Reset my password",
+    "entities": ["password"]
+  }
+]

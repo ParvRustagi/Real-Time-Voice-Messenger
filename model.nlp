@@ -1,0 +1,1831 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hi": {
+            "intent": "smalltalk.greetings",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "smalltalk.greetings",
+            "domain": "default"
+          },
+          "hey,there": {
+            "intent": "smalltalk.greetings",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "smalltalk.greetings",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "smalltalk.greetings",
+            "domain": "default"
+          },
+          "thank,you": {
+            "intent": "smalltalk.thanks",
+            "domain": "default"
+          },
+          "thank": {
+            "intent": "smalltalk.thanks",
+            "domain": "default"
+          },
+          "a,lot,thank": {
+            "intent": "smalltalk.thanks",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "smalltalk.goodbye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "smalltalk.goodbye",
+            "domain": "default"
+          },
+          "goodby": {
+            "intent": "smalltalk.goodbye",
+            "domain": "default"
+          },
+          "soon,talk,to,you": {
+            "intent": "smalltalk.goodbye",
+            "domain": "default"
+          },
+          "are,hour,what,work,your": {
+            "intent": "faq.hours",
+            "domain": "default"
+          },
+          "are,open,when,you": {
+            "intent": "faq.hours",
+            "domain": "default"
+          },
+          "close,do,time,what,you": {
+            "intent": "faq.hours",
+            "domain": "default"
+          },
+          "are,locat,where,you": {
+            "intent": "faq.location",
+            "domain": "default"
+          },
+          "address,is,what,your": {
+            "intent": "faq.location",
+            "domain": "default"
+          },
+          "can,find,i,where,you": {
+            "intent": "faq.location",
+            "domain": "default"
+          },
+          "can,contact,how,i,support": {
+            "intent": "faq.contact",
+            "domain": "default"
+          },
+          "number,phone,what’,your": {
+            "intent": "faq.contact",
+            "domain": "default"
+          },
+          "can,email,i,you": {
+            "intent": "faq.contact",
+            "domain": "default"
+          },
+          "bill,help,i,need,with": {
+            "intent": "support.request",
+            "domain": "default"
+          },
+          "can,dashboard,help,me,with,you": {
+            "intent": "support.request",
+            "domain": "default"
+          },
+          "an,have,i,issu,login,with": {
+            "intent": "support.request",
+            "domain": "default"
+          },
+          "password,problem,reset,with": {
+            "intent": "support.request",
+            "domain": "default"
+          },
+          "cancel,i,my,subscript,to,want": {
+            "intent": "support.cancel",
+            "domain": "default"
+          },
+          "cancel,membership,my": {
+            "intent": "support.cancel",
+            "domain": "default"
+          },
+          "i’d,like,servic,stop,to,use,your": {
+            "intent": "support.cancel",
+            "domain": "default"
+          },
+          "forgot,i,my,password": {
+            "intent": "support.resetPassword",
+            "domain": "default"
+          },
+          "do,how,i,my,password,reset": {
+            "intent": "support.resetPassword",
+            "domain": "default"
+          },
+          "can,help,login,me,my,recov,you": {
+            "intent": "support.resetPassword",
+            "domain": "default"
+          },
+          "": {
+            "intent": "fallback",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "smalltalk.greetings": "default",
+          "smalltalk.thanks": "default",
+          "smalltalk.goodbye": "default",
+          "faq.hours": "default",
+          "faq.location": "default",
+          "faq.contact": "default",
+          "support.request": "default",
+          "support.cancel": "default",
+          "support.resetPassword": "default",
+          "fallback": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "smalltalk.greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "smalltalk.greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey there",
+            "intent": "smalltalk.greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Good morning",
+            "intent": "smalltalk.greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "How are you?",
+            "intent": "smalltalk.greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Thank you",
+            "intent": "smalltalk.thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "Thanks",
+            "intent": "smalltalk.thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "Thanks a lot",
+            "intent": "smalltalk.thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "Bye",
+            "intent": "smalltalk.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "See you later",
+            "intent": "smalltalk.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "Goodbye",
+            "intent": "smalltalk.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "Talk to you soon",
+            "intent": "smalltalk.goodbye"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are your working hours?",
+            "intent": "faq.hours"
+          },
+          {
+            "domain": "default",
+            "utterance": "When are you open?",
+            "intent": "faq.hours"
+          },
+          {
+            "domain": "default",
+            "utterance": "What time do you close?",
+            "intent": "faq.hours"
+          },
+          {
+            "domain": "default",
+            "utterance": "Where are you located?",
+            "intent": "faq.location"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is your address?",
+            "intent": "faq.location"
+          },
+          {
+            "domain": "default",
+            "utterance": "Where can I find you?",
+            "intent": "faq.location"
+          },
+          {
+            "domain": "default",
+            "utterance": "How can I contact support?",
+            "intent": "faq.contact"
+          },
+          {
+            "domain": "default",
+            "utterance": "What’s your phone number?",
+            "intent": "faq.contact"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I email you?",
+            "intent": "faq.contact"
+          },
+          {
+            "domain": "default",
+            "utterance": "I need help with billing",
+            "intent": "support.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you help me with dashboard?",
+            "intent": "support.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "I have an issue with login",
+            "intent": "support.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "Problem with password reset",
+            "intent": "support.request"
+          },
+          {
+            "domain": "default",
+            "utterance": "I want to cancel my subscription",
+            "intent": "support.cancel"
+          },
+          {
+            "domain": "default",
+            "utterance": "Cancel my membership",
+            "intent": "support.cancel"
+          },
+          {
+            "domain": "default",
+            "utterance": "I’d like to stop using your service",
+            "intent": "support.cancel"
+          },
+          {
+            "domain": "default",
+            "utterance": "I forgot my password",
+            "intent": "support.resetPassword"
+          },
+          {
+            "domain": "default",
+            "utterance": "How do I reset my password?",
+            "intent": "support.resetPassword"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can you help me recover my login?",
+            "intent": "support.resetPassword"
+          },
+          {
+            "domain": "default",
+            "utterance": "...",
+            "intent": "fallback"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hi": 1,
+              "hello": 1,
+              "hey": 1,
+              "there": 1,
+              "good": 1,
+              "morn": 1,
+              "how": 1,
+              "are": 1,
+              "you": 1,
+              "thank": 1,
+              "a": 1,
+              "lot": 1,
+              "bye": 1,
+              "see": 1,
+              "later": 1,
+              "goodby": 1,
+              "talk": 1,
+              "to": 1,
+              "soon": 1,
+              "what": 1,
+              "your": 1,
+              "work": 1,
+              "hour": 1,
+              "when": 1,
+              "open": 1,
+              "time": 1,
+              "do": 1,
+              "close": 1,
+              "where": 1,
+              "locat": 1,
+              "is": 1,
+              "address": 1,
+              "can": 1,
+              "i": 1,
+              "find": 1,
+              "contact": 1,
+              "support": 1,
+              "what’": 1,
+              "phone": 1,
+              "number": 1,
+              "email": 1,
+              "need": 1,
+              "help": 1,
+              "with": 1,
+              "bill": 1,
+              "me": 1,
+              "dashboard": 1,
+              "have": 1,
+              "an": 1,
+              "issu": 1,
+              "login": 1,
+              "problem": 1,
+              "password": 1,
+              "reset": 1,
+              "want": 1,
+              "cancel": 1,
+              "my": 1,
+              "subscript": 1,
+              "membership": 1,
+              "i’d": 1,
+              "like": 1,
+              "stop": 1,
+              "use": 1,
+              "servic": 1,
+              "forgot": 1,
+              "recov": 1
+            },
+            "intents": {
+              "smalltalk.greetings": 1,
+              "smalltalk.thanks": 1,
+              "smalltalk.goodbye": 1,
+              "faq.hours": 1,
+              "faq.location": 1,
+              "faq.contact": 1,
+              "support.request": 1,
+              "support.cancel": 1,
+              "support.resetPassword": 1,
+              "fallback": 1
+            },
+            "intentFeatures": {
+              "smalltalk.greetings": {
+                "hi": 1,
+                "hello": 1,
+                "hey": 1,
+                "there": 1,
+                "good": 1,
+                "morn": 1,
+                "how": 1,
+                "are": 1,
+                "you": 1
+              },
+              "smalltalk.thanks": {
+                "thank": 1,
+                "you": 1,
+                "a": 1,
+                "lot": 1
+              },
+              "smalltalk.goodbye": {
+                "bye": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "goodby": 1,
+                "talk": 1,
+                "to": 1,
+                "soon": 1
+              },
+              "faq.hours": {
+                "what": 1,
+                "are": 1,
+                "your": 1,
+                "work": 1,
+                "hour": 1,
+                "when": 1,
+                "you": 1,
+                "open": 1,
+                "time": 1,
+                "do": 1,
+                "close": 1
+              },
+              "faq.location": {
+                "where": 1,
+                "are": 1,
+                "you": 1,
+                "locat": 1,
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "address": 1,
+                "can": 1,
+                "i": 1,
+                "find": 1
+              },
+              "faq.contact": {
+                "how": 1,
+                "can": 1,
+                "i": 1,
+                "contact": 1,
+                "support": 1,
+                "what’": 1,
+                "your": 1,
+                "phone": 1,
+                "number": 1,
+                "email": 1,
+                "you": 1
+              },
+              "support.request": {
+                "i": 1,
+                "need": 1,
+                "help": 1,
+                "with": 1,
+                "bill": 1,
+                "can": 1,
+                "you": 1,
+                "me": 1,
+                "dashboard": 1,
+                "have": 1,
+                "an": 1,
+                "issu": 1,
+                "login": 1,
+                "problem": 1,
+                "password": 1,
+                "reset": 1
+              },
+              "support.cancel": {
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "cancel": 1,
+                "my": 1,
+                "subscript": 1,
+                "membership": 1,
+                "i’d": 1,
+                "like": 1,
+                "stop": 1,
+                "use": 1,
+                "your": 1,
+                "servic": 1
+              },
+              "support.resetPassword": {
+                "i": 1,
+                "forgot": 1,
+                "my": 1,
+                "password": 1,
+                "how": 1,
+                "do": 1,
+                "reset": 1,
+                "can": 1,
+                "you": 1,
+                "help": 1,
+                "me": 1,
+                "recov": 1,
+                "login": 1
+              },
+              "fallback": {}
+            },
+            "featuresToIntent": {
+              "hi": [
+                "smalltalk.greetings"
+              ],
+              "hello": [
+                "smalltalk.greetings"
+              ],
+              "hey": [
+                "smalltalk.greetings"
+              ],
+              "there": [
+                "smalltalk.greetings"
+              ],
+              "good": [
+                "smalltalk.greetings"
+              ],
+              "morn": [
+                "smalltalk.greetings"
+              ],
+              "how": [
+                "smalltalk.greetings",
+                "faq.contact",
+                "support.resetPassword"
+              ],
+              "are": [
+                "smalltalk.greetings",
+                "faq.hours",
+                "faq.location"
+              ],
+              "you": [
+                "smalltalk.greetings",
+                "smalltalk.thanks",
+                "smalltalk.goodbye",
+                "faq.hours",
+                "faq.location",
+                "faq.contact",
+                "support.request",
+                "support.resetPassword"
+              ],
+              "thank": [
+                "smalltalk.thanks"
+              ],
+              "a": [
+                "smalltalk.thanks"
+              ],
+              "lot": [
+                "smalltalk.thanks"
+              ],
+              "bye": [
+                "smalltalk.goodbye"
+              ],
+              "see": [
+                "smalltalk.goodbye"
+              ],
+              "later": [
+                "smalltalk.goodbye"
+              ],
+              "goodby": [
+                "smalltalk.goodbye"
+              ],
+              "talk": [
+                "smalltalk.goodbye"
+              ],
+              "to": [
+                "smalltalk.goodbye",
+                "support.cancel"
+              ],
+              "soon": [
+                "smalltalk.goodbye"
+              ],
+              "what": [
+                "faq.hours",
+                "faq.location"
+              ],
+              "your": [
+                "faq.hours",
+                "faq.location",
+                "faq.contact",
+                "support.cancel"
+              ],
+              "work": [
+                "faq.hours"
+              ],
+              "hour": [
+                "faq.hours"
+              ],
+              "when": [
+                "faq.hours"
+              ],
+              "open": [
+                "faq.hours"
+              ],
+              "time": [
+                "faq.hours"
+              ],
+              "do": [
+                "faq.hours",
+                "support.resetPassword"
+              ],
+              "close": [
+                "faq.hours"
+              ],
+              "where": [
+                "faq.location"
+              ],
+              "locat": [
+                "faq.location"
+              ],
+              "is": [
+                "faq.location"
+              ],
+              "address": [
+                "faq.location"
+              ],
+              "can": [
+                "faq.location",
+                "faq.contact",
+                "support.request",
+                "support.resetPassword"
+              ],
+              "i": [
+                "faq.location",
+                "faq.contact",
+                "support.request",
+                "support.cancel",
+                "support.resetPassword"
+              ],
+              "find": [
+                "faq.location"
+              ],
+              "contact": [
+                "faq.contact"
+              ],
+              "support": [
+                "faq.contact"
+              ],
+              "what’": [
+                "faq.contact"
+              ],
+              "phone": [
+                "faq.contact"
+              ],
+              "number": [
+                "faq.contact"
+              ],
+              "email": [
+                "faq.contact"
+              ],
+              "need": [
+                "support.request"
+              ],
+              "help": [
+                "support.request",
+                "support.resetPassword"
+              ],
+              "with": [
+                "support.request"
+              ],
+              "bill": [
+                "support.request"
+              ],
+              "me": [
+                "support.request",
+                "support.resetPassword"
+              ],
+              "dashboard": [
+                "support.request"
+              ],
+              "have": [
+                "support.request"
+              ],
+              "an": [
+                "support.request"
+              ],
+              "issu": [
+                "support.request"
+              ],
+              "login": [
+                "support.request",
+                "support.resetPassword"
+              ],
+              "problem": [
+                "support.request"
+              ],
+              "password": [
+                "support.request",
+                "support.resetPassword"
+              ],
+              "reset": [
+                "support.request",
+                "support.resetPassword"
+              ],
+              "want": [
+                "support.cancel"
+              ],
+              "cancel": [
+                "support.cancel"
+              ],
+              "my": [
+                "support.cancel",
+                "support.resetPassword"
+              ],
+              "subscript": [
+                "support.cancel"
+              ],
+              "membership": [
+                "support.cancel"
+              ],
+              "i’d": [
+                "support.cancel"
+              ],
+              "like": [
+                "support.cancel"
+              ],
+              "stop": [
+                "support.cancel"
+              ],
+              "use": [
+                "support.cancel"
+              ],
+              "servic": [
+                "support.cancel"
+              ],
+              "forgot": [
+                "support.resetPassword"
+              ],
+              "recov": [
+                "support.resetPassword"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hi",
+                "hello",
+                "hey",
+                "there",
+                "good",
+                "morn",
+                "how",
+                "are",
+                "you",
+                "thank",
+                "a",
+                "lot",
+                "bye",
+                "see",
+                "later",
+                "goodby",
+                "talk",
+                "to",
+                "soon",
+                "what",
+                "your",
+                "work",
+                "hour",
+                "when",
+                "open",
+                "time",
+                "do",
+                "close",
+                "where",
+                "locat",
+                "is",
+                "address",
+                "can",
+                "i",
+                "find",
+                "contact",
+                "support",
+                "what’",
+                "phone",
+                "number",
+                "email",
+                "need",
+                "help",
+                "with",
+                "bill",
+                "me",
+                "dashboard",
+                "have",
+                "an",
+                "issu",
+                "login",
+                "problem",
+                "password",
+                "reset",
+                "want",
+                "cancel",
+                "my",
+                "subscript",
+                "membership",
+                "i’d",
+                "like",
+                "stop",
+                "use",
+                "servic",
+                "forgot",
+                "recov"
+              ],
+              "intents": [
+                "smalltalk.greetings",
+                "smalltalk.thanks",
+                "smalltalk.goodbye",
+                "faq.hours",
+                "faq.location",
+                "faq.contact",
+                "support.request",
+                "support.cancel",
+                "support.resetPassword",
+                "fallback"
+              ],
+              "perceptrons": [
+                [
+                  14.078500747680664,
+                  14.077038764953613,
+                  7.047715187072754,
+                  7.047715187072754,
+                  7.047412395477295,
+                  7.047412395477295,
+                  8.656270980834961,
+                  4.307217597961426,
+                  1.1365817785263062,
+                  -3.666642427444458,
+                  -0.6379173994064331,
+                  -0.6379173994064331,
+                  -3.423283815383911,
+                  -1.6489938497543335,
+                  -1.6489938497543335,
+                  -3.38686203956604,
+                  -1.0379083156585693,
+                  -1.2416856288909912,
+                  -1.0379083156585693,
+                  -1.8006192445755005,
+                  -2.1984050273895264,
+                  -1.2350153923034668,
+                  -1.2350153923034668,
+                  -3.198129415512085,
+                  -3.198129415512085,
+                  -0.2764517366886139,
+                  -1.3861258029937744,
+                  -0.2764517366886139,
+                  -3.264134645462036,
+                  -3.1397979259490967,
+                  -0.21878498792648315,
+                  -0.21878498792648315,
+                  -2.4214107990264893,
+                  -3.902435302734375,
+                  -0.08621025085449219,
+                  -2.160571336746216,
+                  -2.160571336746216,
+                  -0.5712372660636902,
+                  -0.5712372660636902,
+                  -0.5712372660636902,
+                  -0.046813081949949265,
+                  -0.17081648111343384,
+                  -0.25376448035240173,
+                  -0.9449483156204224,
+                  -0.17081648111343384,
+                  -0.05612761899828911,
+                  -0.05612761899828911,
+                  -0.1464659869670868,
+                  -0.1464659869670868,
+                  -0.1464659869670868,
+                  -0.1464659869670868,
+                  -0.5053319931030273,
+                  -1.6426374912261963,
+                  -1.587421178817749,
+                  -0.04232139512896538,
+                  -1.009967565536499,
+                  -2.1400771141052246,
+                  -0.04232139512896538,
+                  -0.945419430732727,
+                  -0.1302659809589386,
+                  -0.1302659809589386,
+                  -0.1302659809589386,
+                  -0.1302659809589386,
+                  -0.1302659809589386,
+                  -0.04450268670916557,
+                  0,
+                  0.17145736792605035
+                ],
+                [
+                  -0.728253960609436,
+                  -0.7217154502868652,
+                  -0.41811954975128174,
+                  -0.41811954975128174,
+                  -0.41114187240600586,
+                  -0.41114187240600586,
+                  -0.5568568706512451,
+                  -1.3060886859893799,
+                  0.01233784668147564,
+                  14.266669273376465,
+                  0.005012814421206713,
+                  0.005012814421206713,
+                  -0.8260177373886108,
+                  -0.9531518220901489,
+                  -0.9531518220901489,
+                  -0.8008806109428406,
+                  -0.6029766798019409,
+                  -0.7203234434127808,
+                  -0.6029766798019409,
+                  -0.7096389532089233,
+                  -0.5790249109268188,
+                  -0.10167593508958817,
+                  -0.10167593508958817,
+                  -0.3986645042896271,
+                  -0.3986645042896271,
+                  -0.40384575724601746,
+                  -0.4122788608074188,
+                  -0.40384575724601746,
+                  -0.45055776834487915,
+                  -0.3082221448421478,
+                  -0.10902759432792664,
+                  -0.10902759432792664,
+                  -0.7672299742698669,
+                  -0.8535140156745911,
+                  -0.12419112771749496,
+                  -0.0983918085694313,
+                  -0.0983918085694313,
+                  -0.1984793245792389,
+                  -0.1984793245792389,
+                  -0.1984793245792389,
+                  -0.30341818928718567,
+                  -0.0817783921957016,
+                  -0.300728440284729,
+                  -0.5295010209083557,
+                  -0.0817783921957016,
+                  -0.19777387380599976,
+                  -0.13716720044612885,
+                  -0.06121496483683586,
+                  -0.06121496483683586,
+                  -0.06121496483683586,
+                  -0.13687081634998322,
+                  -0.19772425293922424,
+                  -0.2574686110019684,
+                  -0.20641426742076874,
+                  -0.032845914363861084,
+                  -0.33169740438461304,
+                  -0.4675483703613281,
+                  -0.032845914363861084,
+                  -0.28339260816574097,
+                  -0.05280466750264168,
+                  -0.05280466750264168,
+                  -0.05280466750264168,
+                  -0.05280466750264168,
+                  -0.05280466750264168,
+                  -0.037395741790533066,
+                  -0.06026142090559006,
+                  0.009859730941422687
+                ],
+                [
+                  -2.4364144802093506,
+                  -2.41690993309021,
+                  -1.3202102184295654,
+                  -1.3202102184295654,
+                  -1.3168355226516724,
+                  -1.3168355226516724,
+                  -0.9423162341117859,
+                  -2.889979362487793,
+                  2.168902635574341,
+                  -3.4420974254608154,
+                  -0.1974850445985794,
+                  -0.1974850445985794,
+                  14.186869621276855,
+                  6.01632022857666,
+                  6.01632022857666,
+                  14.18581771850586,
+                  4.452789306640625,
+                  3.127537488937378,
+                  4.452789306640625,
+                  -1.4686919450759888,
+                  -1.6278473138809204,
+                  -0.14890532195568085,
+                  -0.14890532195568085,
+                  -0.9676693677902222,
+                  -0.9676693677902222,
+                  -1.0476484298706055,
+                  -1.0476484298706055,
+                  -1.0476484298706055,
+                  -1.2296464443206787,
+                  -0.7648330330848694,
+                  -0.16432897746562958,
+                  -0.16432897746562958,
+                  -1.8404409885406494,
+                  -1.9448091983795166,
+                  -0.40235966444015503,
+                  -0.0664134994149208,
+                  -0.0664134994149208,
+                  -0.44600847363471985,
+                  -0.44600847363471985,
+                  -0.44600847363471985,
+                  -0.6735489368438721,
+                  -0.054512735456228256,
+                  -0.6793299913406372,
+                  -1.1861265897750854,
+                  -0.054512735456228256,
+                  -0.5963478088378906,
+                  -0.43976008892059326,
+                  -0.04257851839065552,
+                  -0.04257851839065552,
+                  -0.04257851839065552,
+                  -0.19432111084461212,
+                  -0.5908148884773254,
+                  -0.5932971835136414,
+                  -0.5908148884773254,
+                  -0.553208589553833,
+                  -1.1115548610687256,
+                  -1.264883041381836,
+                  -0.553208589553833,
+                  -0.5437304377555847,
+                  -0.7569896578788757,
+                  -0.7569896578788757,
+                  -0.7569896578788757,
+                  -0.7569896578788757,
+                  -0.7569896578788757,
+                  -0.0012379699619486928,
+                  -0.1341952532529831,
+                  0.07882720151231715
+                ],
+                [
+                  -0.1469576209783554,
+                  -0.1516360193490982,
+                  -0.12200567126274109,
+                  -0.12200567126274109,
+                  -0.11804056167602539,
+                  -0.11804056167602539,
+                  -3.659811496734619,
+                  3.1692793369293213,
+                  0.643491268157959,
+                  -0.6973267793655396,
+                  -0.007773996330797672,
+                  -0.007773996330797672,
+                  -0.05479464307427406,
+                  -0.4374230206012726,
+                  -0.4374230206012726,
+                  -0.040082722902297974,
+                  -0.2601444125175476,
+                  -0.47018009424209595,
+                  -0.2601444125175476,
+                  4.237966060638428,
+                  0.4729626178741455,
+                  3.279231548309326,
+                  3.279231548309326,
+                  5.312950134277344,
+                  5.312950134277344,
+                  3.237724781036377,
+                  3.0817644596099854,
+                  3.237724781036377,
+                  -2.256957530975342,
+                  -1.9492372274398804,
+                  -2.278985023498535,
+                  -2.278985023498535,
+                  -1.068435788154602,
+                  -0.8776513338088989,
+                  -0.20751018822193146,
+                  -0.027375271543860435,
+                  -0.027375271543860435,
+                  -0.29856279492378235,
+                  -0.29856279492378235,
+                  -0.29856279492378235,
+                  -0.26576513051986694,
+                  -0.016468094661831856,
+                  -0.3857314884662628,
+                  -0.35788992047309875,
+                  -0.016468094661831856,
+                  -0.35382452607154846,
+                  -0.17711731791496277,
+                  -0.004136679694056511,
+                  -0.004136679694056511,
+                  -0.004136679694056511,
+                  -0.11326926946640015,
+                  -0.06071453541517258,
+                  -0.21100342273712158,
+                  -0.2100510597229004,
+                  -0.0058744968846440315,
+                  -0.09982838481664658,
+                  -0.417121946811676,
+                  -0.0058744968846440315,
+                  -0.08881369978189468,
+                  -0.16108794510364532,
+                  -0.16108794510364532,
+                  -0.16108794510364532,
+                  -0.16108794510364532,
+                  -0.16108794510364532,
+                  -0.00040606738184578717,
+                  -0.10603008419275284,
+                  -0.15295764581280472
+                ],
+                [
+                  -0.18674515187740326,
+                  -0.18049204349517822,
+                  -0.13356463611125946,
+                  -0.13356463611125946,
+                  -0.12913233041763306,
+                  -0.12913233041763306,
+                  -1.5657488107681274,
+                  0.49917367100715637,
+                  0.9881845712661743,
+                  -1.0165305137634277,
+                  -0.018257727846503258,
+                  -0.018257727846503258,
+                  -0.11601794511079788,
+                  -0.5599685311317444,
+                  -0.5599685311317444,
+                  -0.10043341666460037,
+                  -0.2562319338321686,
+                  -0.7801957130432129,
+                  -0.2562319338321686,
+                  1.9915306568145752,
+                  1.9103330373764038,
+                  -2.2059683799743652,
+                  -2.2059683799743652,
+                  -0.7683384418487549,
+                  -0.7683384418487549,
+                  -0.9926174879074097,
+                  -1.0368921756744385,
+                  -0.9926174879074097,
+                  8.342266082763672,
+                  4.456017971038818,
+                  5.19188928604126,
+                  5.19188928604126,
+                  0.5303525924682617,
+                  0.5385847687721252,
+                  3.8862555027008057,
+                  -0.4630189538002014,
+                  -0.4630189538002014,
+                  -0.6879443526268005,
+                  -0.6879443526268005,
+                  -0.6879443526268005,
+                  -2.0779521465301514,
+                  -0.13671040534973145,
+                  -0.8990703821182251,
+                  -0.8185605406761169,
+                  -0.13671040534973145,
+                  -0.6933695673942566,
+                  -0.40518176555633545,
+                  -0.0976794958114624,
+                  -0.0976794958114624,
+                  -0.0976794958114624,
+                  -0.3494836390018463,
+                  -0.027236882597208023,
+                  -0.2302335798740387,
+                  -0.06451034545898438,
+                  -0.10269203037023544,
+                  -0.18820199370384216,
+                  -0.6823339462280273,
+                  -0.10269203037023544,
+                  -0.047711331397295,
+                  -0.3097991347312927,
+                  -0.3097991347312927,
+                  -0.3097991347312927,
+                  -0.3097991347312927,
+                  -0.3097991347312927,
+                  -0.14632660150527954,
+                  -0.20552442967891693,
+                  0.00006503564912036479
+                ],
+                [
+                  -0.2908684015274048,
+                  -0.2827523350715637,
+                  -0.2009531408548355,
+                  -0.2009531408548355,
+                  -0.19563518464565277,
+                  -0.19563518464565277,
+                  1.16905677318573,
+                  -1.3839714527130127,
+                  0.10899803042411804,
+                  -0.4201665222644806,
+                  -0.04891045019030571,
+                  -0.04891045019030571,
+                  -0.2352982461452484,
+                  -0.21928788721561432,
+                  -0.21928788721561432,
+                  -0.22688281536102295,
+                  -0.05744779109954834,
+                  -0.9116143584251404,
+                  -0.05744779109954834,
+                  -1.1851832866668701,
+                  2.3732028007507324,
+                  -0.3378324806690216,
+                  -0.3378324806690216,
+                  -0.049972664564847946,
+                  -0.049972664564847946,
+                  -0.04471254348754883,
+                  -0.7441439032554626,
+                  -0.04471254348754883,
+                  -3.871004819869995,
+                  -0.02651064284145832,
+                  -0.727776288986206,
+                  -0.727776288986206,
+                  4.534135341644287,
+                  3.0567259788513184,
+                  -3.834723472595215,
+                  2.7628138065338135,
+                  2.7628138065338135,
+                  3.970777750015259,
+                  3.970777750015259,
+                  3.970777750015259,
+                  6.585679054260254,
+                  -0.3717111349105835,
+                  -1.4075690507888794,
+                  -1.6041432619094849,
+                  -0.3717111349105835,
+                  -0.9795297384262085,
+                  -0.6926992535591125,
+                  -0.36323675513267517,
+                  -0.36323675513267517,
+                  -0.36323675513267517,
+                  -0.6664639115333557,
+                  -0.026291266083717346,
+                  -1.2128044366836548,
+                  -0.7305871248245239,
+                  -0.35692083835601807,
+                  -0.4467003643512726,
+                  -1.9331120252609253,
+                  -0.35692083835601807,
+                  -0.052647486329078674,
+                  -0.40300917625427246,
+                  -0.40300917625427246,
+                  -0.40300917625427246,
+                  -0.40300917625427246,
+                  -0.40300917625427246,
+                  -0.4276977479457855,
+                  -0.22246107459068298,
+                  0.0001606324441208669
+                ],
+                [
+                  -0.3119592070579529,
+                  -0.3037022054195404,
+                  -0.21300682425498962,
+                  -0.21300682425498962,
+                  -0.20704929530620575,
+                  -0.20704929530620575,
+                  -1.0022883415222168,
+                  -0.33400759100914,
+                  -0.48838138580322266,
+                  -0.42517074942588806,
+                  -0.0746530294418335,
+                  -0.0746530294418335,
+                  -0.27899953722953796,
+                  -0.1437489092350006,
+                  -0.1437489092350006,
+                  -0.2712738811969757,
+                  -0.06770439445972443,
+                  -0.5008110404014587,
+                  -0.06770439445972443,
+                  -0.15001054108142853,
+                  -0.3083612024784088,
+                  -0.0280629750341177,
+                  -0.0280629750341177,
+                  -0.0697353184223175,
+                  -0.0697353184223175,
+                  -0.05168360099196434,
+                  -0.6251206398010254,
+                  -0.05168360099196434,
+                  -0.4664953649044037,
+                  -0.04490335285663605,
+                  -0.040679413825273514,
+                  -0.040679413825273514,
+                  0.0741548016667366,
+                  0.5655733942985535,
+                  -0.3993714153766632,
+                  -0.24824632704257965,
+                  -0.24824632704257965,
+                  -0.047586340457201004,
+                  -0.047586340457201004,
+                  -0.047586340457201004,
+                  -0.41596099734306335,
+                  1.411819338798523,
+                  2.6692235469818115,
+                  8.22712230682373,
+                  1.411819338798523,
+                  1.2574063539505005,
+                  2.5460309982299805,
+                  1.6953707933425903,
+                  1.6953707933425903,
+                  1.6953707933425903,
+                  0.406747430562973,
+                  2.5739006996154785,
+                  1.4952914714813232,
+                  1.9892348051071167,
+                  -0.18755079805850983,
+                  -0.3510817587375641,
+                  -2.766474485397339,
+                  -0.18755079805850983,
+                  -0.09103428572416306,
+                  -0.11381902545690536,
+                  -0.11381902545690536,
+                  -0.11381902545690536,
+                  -0.11381902545690536,
+                  -0.11381902545690536,
+                  -0.4336153268814087,
+                  -1.2813944816589355,
+                  0.00015095378929445765
+                ],
+                [
+                  -0.30212265253067017,
+                  -0.2968611717224121,
+                  -0.21406212449073792,
+                  -0.21406212449073792,
+                  -0.20721220970153809,
+                  -0.20721220970153809,
+                  -0.7138551473617554,
+                  -0.34574371576309204,
+                  -1.5365546941757202,
+                  -0.3919491469860077,
+                  -0.10237113386392593,
+                  -0.10237113386392593,
+                  -0.27905863523483276,
+                  -0.038134895265102386,
+                  -0.038134895265102386,
+                  -0.2747018039226532,
+                  -0.8136155009269714,
+                  2.6207664012908936,
+                  -0.8136155009269714,
+                  -0.6845382452011108,
+                  0.9665341973304749,
+                  -0.2761757969856262,
+                  -0.2761757969856262,
+                  -0.004447137471288443,
+                  -0.004447137471288443,
+                  -0.0009720768430270255,
+                  -0.6229070425033569,
+                  -0.0009720768430270255,
+                  -0.00043782094144262373,
+                  -0.00043782094144262373,
+                  -0.3424975275993347,
+                  -0.3424975275993347,
+                  -0.47937577962875366,
+                  -0.6793625950813293,
+                  0,
+                  -0.014372886158525944,
+                  -0.014372886158525944,
+                  -0.426824152469635,
+                  -0.426824152469635,
+                  -0.426824152469635,
+                  0,
+                  -0.0421309731900692,
+                  -0.5315078496932983,
+                  -0.09547799825668335,
+                  -0.0421309731900692,
+                  -0.43618419766426086,
+                  0,
+                  -0.03055463917553425,
+                  -0.03055463917553425,
+                  -0.03055463917553425,
+                  -0.516669511795044,
+                  -0.00391360092908144,
+                  -1.919163703918457,
+                  -0.6286063194274902,
+                  1.3618193864822388,
+                  6.026828765869141,
+                  3.5936262607574463,
+                  1.3618193864822388,
+                  4.665010929107666,
+                  2.139636993408203,
+                  2.139636993408203,
+                  2.139636993408203,
+                  2.139636993408203,
+                  2.139636993408203,
+                  -1.2225106954574585,
+                  -0.43618419766426086,
+                  0.00021553532161110907
+                ],
+                [
+                  -0.12852059304714203,
+                  -0.1234341412782669,
+                  -0.09128083288669586,
+                  -0.09128083288669586,
+                  -0.08760841935873032,
+                  -0.08760841935873032,
+                  0.8978086709976196,
+                  -0.5207250118255615,
+                  -0.266002893447876,
+                  -0.3153819441795349,
+                  -0.04889150336384773,
+                  -0.04889150336384773,
+                  -0.08722123503684998,
+                  -0.11794991046190262,
+                  -0.11794991046190262,
+                  -0.07800222188234329,
+                  -0.09993085265159607,
+                  -1.36629319190979,
+                  -0.09993085265159607,
+                  -0.4140439033508301,
+                  -0.07947748154401779,
+                  -0.020017536357045174,
+                  -0.020017536357045174,
+                  -0.07034921646118164,
+                  -0.07034921646118164,
+                  -0.33785244822502136,
+                  1.8332513570785522,
+                  -0.33785244822502136,
+                  -0.44944408535957336,
+                  -0.026982245966792107,
+                  -0.020999254658818245,
+                  -0.020999254658818245,
+                  0.16289854049682617,
+                  1.6749130487442017,
+                  -0.397165983915329,
+                  -0.9484183192253113,
+                  -0.9484183192253113,
+                  -0.012090715579688549,
+                  -0.012090715579688549,
+                  -0.012090715579688549,
+                  -0.6637368202209473,
+                  -0.33606600761413574,
+                  1.842458963394165,
+                  -2.8179547786712646,
+                  -0.33606600761413574,
+                  2.2386810779571533,
+                  -0.672926664352417,
+                  -0.29075396060943604,
+                  -0.29075396060943604,
+                  -0.29075396060943604,
+                  2.6178131103515625,
+                  -1.4035183191299438,
+                  4.328502178192139,
+                  0.7987220883369446,
+                  -1.22202730178833,
+                  -3.0093026161193848,
+                  5.66058874130249,
+                  -1.22202730178833,
+                  -1.7432138919830322,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  3.529780864715576,
+                  2.937347888946533,
+                  -0.9080715036104494
+                ],
+                [
+                  -12.008930206298828,
+                  -12.000716209411621,
+                  -6.054337501525879,
+                  -6.054337501525879,
+                  -6.05248498916626,
+                  -6.05248498916626,
+                  -2.175909996032715,
+                  -2.8789162635803223,
+                  -7.15062952041626,
+                  -11.984556198120117,
+                  -0.46070215106010437,
+                  -0.46070215106010437,
+                  -11.97624397277832,
+                  -2.4984030723571777,
+                  -2.4984030723571777,
+                  -11.966262817382812,
+                  -1.3594334125518799,
+                  -2.2869956493377686,
+                  -1.3594334125518799,
+                  -2.9832191467285156,
+                  -5.431642055511475,
+                  -0.4403400421142578,
+                  -0.4403400421142578,
+                  -1.0636764764785767,
+                  -1.0636764764785767,
+                  -0.6758451461791992,
+                  -0.6771454215049744,
+                  -0.6758451461791992,
+                  -1.0682646036148071,
+                  -1.05420982837677,
+                  -1.865119218826294,
+                  -1.865119218826294,
+                  -1.8777931928634644,
+                  -4.381065845489502,
+                  -0.010291491635143757,
+                  -1.8552067279815674,
+                  -1.8552067279815674,
+                  -2.2350475788116455,
+                  -2.2350475788116455,
+                  -2.2350475788116455,
+                  -0.002941697370260954,
+                  -1.1264137029647827,
+                  -1.1292648315429688,
+                  -4.392854690551758,
+                  -1.1264137029647827,
+                  -0.0014773401198908687,
+                  -0.0014773401198908687,
+                  -0.8457905650138855,
+                  -0.8457905650138855,
+                  -0.8457905650138855,
+                  -0.8457905650138855,
+                  -2.4147744178771973,
+                  -2.9068644046783447,
+                  -2.416074514389038,
+                  -0.033800724893808365,
+                  -3.884274482727051,
+                  -4.377534866333008,
+                  -0.033800724893808365,
+                  -3.844541311264038,
+                  -0.8864052891731262,
+                  -0.8864052891731262,
+                  -0.8864052891731262,
+                  -0.8864052891731262,
+                  -0.8864052891731262,
+                  -0.4887138605117798,
+                  0,
+                  12.22833157292332
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Hey there"
+      ],
+      [
+        "en",
+        "Good morning"
+      ],
+      [
+        "en",
+        "How are you?"
+      ],
+      [
+        "en",
+        "Thank you"
+      ],
+      [
+        "en",
+        "Thanks"
+      ],
+      [
+        "en",
+        "Thanks a lot"
+      ],
+      [
+        "en",
+        "Bye"
+      ],
+      [
+        "en",
+        "See you later"
+      ],
+      [
+        "en",
+        "Goodbye"
+      ],
+      [
+        "en",
+        "Talk to you soon"
+      ],
+      [
+        "en",
+        "What are your working hours?"
+      ],
+      [
+        "en",
+        "When are you open?"
+      ],
+      [
+        "en",
+        "What time do you close?"
+      ],
+      [
+        "en",
+        "Where are you located?"
+      ],
+      [
+        "en",
+        "What is your address?"
+      ],
+      [
+        "en",
+        "Where can I find you?"
+      ],
+      [
+        "en",
+        "How can I contact support?"
+      ],
+      [
+        "en",
+        "What’s your phone number?"
+      ],
+      [
+        "en",
+        "Can I email you?"
+      ],
+      [
+        "en",
+        "I need help with billing"
+      ],
+      [
+        "en",
+        "Can you help me with dashboard?"
+      ],
+      [
+        "en",
+        "I have an issue with login"
+      ],
+      [
+        "en",
+        "Problem with password reset"
+      ],
+      [
+        "en",
+        "I want to cancel my subscription"
+      ],
+      [
+        "en",
+        "Cancel my membership"
+      ],
+      [
+        "en",
+        "I’d like to stop using your service"
+      ],
+      [
+        "en",
+        "I forgot my password"
+      ],
+      [
+        "en",
+        "How do I reset my password?"
+      ],
+      [
+        "en",
+        "Can you help me recover my login?"
+      ],
+      [
+        "en",
+        "..."
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {
+      "en": {
+        "product": {
+          "name": "product",
+          "type": "enum",
+          "rules": [
+            {
+              "option": "billing",
+              "texts": [
+                "billing",
+                "my bill"
+              ]
+            },
+            {
+              "option": "dashboard",
+              "texts": [
+                "dashboard",
+                "UI"
+              ]
+            },
+            {
+              "option": "login",
+              "texts": [
+                "login",
+                "sign in"
+              ]
+            },
+            {
+              "option": "password",
+              "texts": [
+                "password",
+                "reset password"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "smalltalk.greetings": [
+          {
+            "answer": "Hey! How can I assist you?"
+          },
+          {
+            "answer": "I’m great, how about you?"
+          },
+          {
+            "answer": "Hello there!"
+          }
+        ],
+        "smalltalk.thanks": [
+          {
+            "answer": "You’re welcome!"
+          },
+          {
+            "answer": "Happy to help!"
+          },
+          {
+            "answer": "Anytime!"
+          }
+        ],
+        "smalltalk.goodbye": [
+          {
+            "answer": "Goodbye!"
+          },
+          {
+            "answer": "Take care!"
+          },
+          {
+            "answer": "Catch you later!"
+          }
+        ],
+        "faq.hours": [
+          {
+            "answer": "We’re open 9am to 6pm, Monday to Friday."
+          }
+        ],
+        "faq.location": [
+          {
+            "answer": "We are located at 123 Developer Lane, Code City."
+          }
+        ],
+        "faq.contact": [
+          {
+            "answer": "You can reach us at support@example.com or call 1-800-DEV-NODE."
+          }
+        ],
+        "support.request": [
+          {
+            "answer": "Sure, I can help you with {{product}}!"
+          }
+        ],
+        "support.cancel": [
+          {
+            "answer": "Your subscription to {{product}} has been cancelled."
+          }
+        ],
+        "support.resetPassword": [
+          {
+            "answer": "Click the \"Forgot Password\" link on the login page to reset it."
+          }
+        ],
+        "fallback": [
+          {
+            "answer": "Sorry, I didn’t understand that. Can you try again?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
